@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services | CareConde</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <meta
       name="description"
-      content="CareConde is your honest help for junk removal, moving, and handyman services in Norman, OK and surrounding areas. Locally owned, fully dedicated."
+      content="See our full list of services, including junk removal, local moving, and handyman help in Norman, Moore, OKC, and surrounding areas."
     />
     <meta
       name="keywords"
-      content="junk removal Norman OK, moving help Oklahoma, handyman Norman, CareConde, furniture assembly, remodeling, local services"
+      content="services, junk removal, moving services, handyman, property cleanout, furniture assembly, local movers Norman OK"
     />
   </head>
   <body>
@@ -24,85 +26,81 @@
         <img src="assets/images/logo.png" alt="CareConde Logo" />
       </div>
       <nav>
-        <div class="hamburger" id="hamburger">&#9776;</div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          &#9776;
+        </button>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h2>Our Services</h2>
-        <p>Dependable, honest work. No shortcuts.</p>
-      </div>
-    </section>
+    <main>
+      <section class="hero-small">
+        <div class="hero-text">
+          <h1>Our Services</h1>
+          <p>Dependable, honest work. No shortcuts.</p>
+        </div>
+      </section>
 
-    <section
-      class="content"
-      style="padding: 2rem 1.5rem; max-width: 1000px; margin: auto"
-    >
-      <div class="service-detail">
-        <h3>🗑️ Junk Removal</h3>
-        <p>
-          We haul away old furniture, appliances, yard debris, and general
-          clutter — responsibly and quickly.
-        </p>
-        <ul style="margin-left: 1.5rem; list-style: disc">
-          <li>Single item pickup or full property cleanouts</li>
-          <li>Garage, shed, attic, or rental cleanouts</li>
-          <li>Donation drop-offs and recycling when possible</li>
-        </ul>
-      </div>
+      <section class="services-page-content">
+        <article class="service-detail">
+          <h3><span aria-hidden="true">🗑️</span> Junk Removal</h3>
+          <p>
+            We haul away old furniture, appliances, yard debris, and general
+            clutter — responsibly and quickly.
+          </p>
+          <ul class="feature-list">
+            <li>Single item pickup or full property cleanouts</li>
+            <li>Garage, shed, attic, or rental cleanouts</li>
+            <li>Donation drop-offs and recycling when possible</li>
+          </ul>
+        </article>
 
-      <hr style="margin: 2rem 0; border: none; border-top: 1px solid #ccc" />
+        <hr class="section-divider" />
 
-      <div class="service-detail">
-        <h3>🚚 Moving Services</h3>
-        <p>
-          From one-room apartments to full homes — we move your stuff like it's
-          our own.
-        </p>
-        <ul style="margin-left: 1.5rem; list-style: disc">
-          <li>Local moves and short-hauls</li>
-          <li>Load/unload help for U-Hauls or Pods</li>
-          <li>Disassembly & reassembly available</li>
-        </ul>
-      </div>
+        <article class="service-detail">
+          <h3><span aria-hidden="true">🚚</span> Moving Services</h3>
+          <p>
+            From one-room apartments to full homes — we move your stuff like
+            it's our own.
+          </p>
+          <ul class="feature-list">
+            <li>Local moves and short-hauls</li>
+            <li>Load/unload help for U-Hauls or Pods</li>
+            <li>Disassembly & reassembly available</li>
+          </ul>
+        </article>
 
-      <hr style="margin: 2rem 0; border: none; border-top: 1px solid #ccc" />
+        <hr class="section-divider" />
 
-      <div class="service-detail">
-        <h3>🔧 Handyman Help</h3>
-        <p>Small fixes, big impact. Reliable handyman help when you need it.</p>
-        <ul style="margin-left: 1.5rem; list-style: disc">
-          <li>TV mounting, shelves, curtain rods</li>
-          <li>Furniture assembly</li>
-          <li>Transporting large or heavy items</li>
-          <li>Minor repairs, caulking, light remodeling & more</li>
-        </ul>
-      </div>
-    </section>
+        <article class="service-detail">
+          <h3><span aria-hidden="true">🔧</span> Handyman Help</h3>
+          <p>
+            Small fixes, big impact. Reliable handyman help when you need it.
+          </p>
+          <ul class="feature-list">
+            <li>TV mounting, shelves, curtain rods</li>
+            <li>Furniture assembly</li>
+            <li>Transporting large or heavy items</li>
+            <li>Minor repairs, caulking, light remodeling & more</li>
+          </ul>
+        </article>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2025 CareConde. All rights reserved.</p>
     </footer>
 
-    <script>
-      // Hamburger toggle
-      document.getElementById("hamburger").addEventListener("click", () => {
-        document.getElementById("navLinks").classList.toggle("active");
-      });
-
-      // Highlight current page
-      const navLinks = document.querySelectorAll(".nav-links a");
-      navLinks.forEach((link) => {
-        if (link.href === window.location.href) {
-          link.classList.add("active-link");
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | CareConde</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <meta
       name="description"
-      content="CareConde is your honest help for junk removal, moving, and handyman services in Norman, OK and surrounding areas. Locally owned, fully dedicated."
+      content="Learn about CareConde, a locally-owned business dedicated to providing honest junk removal, moving, and handyman services in Norman, OK."
     />
     <meta
       name="keywords"
-      content="junk removal Norman OK, moving help Oklahoma, handyman Norman, CareConde, furniture assembly, remodeling, local services"
+      content="about CareConde, honest help Norman, local handyman, reliable movers Oklahoma"
     />
   </head>
   <body>
@@ -24,70 +26,64 @@
         <img src="assets/images/logo.png" alt="CareConde Logo" />
       </div>
       <nav>
-        <div class="hamburger" id="hamburger">&#9776;</div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          &#9776;
+        </button>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h2>Our Story</h2>
-        <p>Honest help for your home, built on trust and hard work.</p>
-      </div>
-    </section>
+    <main>
+      <section class="hero-small">
+        <div class="hero-text">
+          <h1>Our Story</h1>
+          <p>Honest help for your home, built on trust and hard work.</p>
+        </div>
+      </section>
 
-    <section
-      class="content"
-      style="padding: 2rem 1.5rem; max-width: 800px; margin: auto"
-    >
-      <h3>Who We Are</h3>
-      <p>
-        CareConde was started with one goal in mind: to bring honest, reliable
-        help to homeowners in our community. Whether you’re moving, need to
-        clean up, or fix something around the house — we’ve got your back.
-      </p>
+      <section class="content-page">
+        <h2>Who We Are</h2>
+        <p>
+          CareConde was started with one goal in mind: to bring honest, reliable
+          help to homeowners in our community. Whether you’re moving, need to
+          clean up, or fix something around the house — we’ve got your back.
+        </p>
 
-      <h3>Why Choose Us?</h3>
-      <ul style="margin-left: 1.5rem; list-style: disc">
-        <li>We show up on time and work with care</li>
-        <li>Transparent pricing — no surprises</li>
-        <li>Locally owned, and proud to serve Oklahoma</li>
-      </ul>
+        <h2>Why Choose Us?</h2>
+        <ul class="feature-list">
+          <li>We show up on time and work with care</li>
+          <li>Transparent pricing — no surprises</li>
+          <li>Locally owned, and proud to serve Oklahoma</li>
+        </ul>
 
-      <p style="margin-top: 1.5rem">
-        We believe in treating people right — with respect, fairness, and
-        hustle. Our respectful team offers same-day quotes, reliable work, and
-        honest service you can count on. Whether you're a homeowner, a renter,
-        or a business, CareConde is your go-to for dependable help across
-        Norman, Moore, OKC, and nearby towns.
-      </p>
+        <p>
+          We believe in treating people right — with respect, fairness, and
+          hustle. Our respectful team offers same-day quotes, reliable work, and
+          honest service you can count on. Whether you're a homeowner, a renter,
+          or a business, CareConde is your go-to for dependable help across
+          Norman, Moore, OKC, and nearby towns.
+        </p>
 
-      <p style="margin-top: 1rem; font-size: 0.9rem; color: #888">
-        #junkremoval #movinghelp #furnitureassembly #remodeling #careconde
-      </p>
-    </section>
+        <div class="hashtags">
+          #junkremoval #movinghelp #furnitureassembly #remodeling #careconde
+        </div>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2025 CareConde. All rights reserved.</p>
     </footer>
 
-    <script>
-      // Hamburger toggle
-      document.getElementById("hamburger").addEventListener("click", () => {
-        document.getElementById("navLinks").classList.toggle("active");
-      });
-
-      // Highlight current page
-      const navLinks = document.querySelectorAll(".nav-links a");
-      navLinks.forEach((link) => {
-        if (link.href === window.location.href) {
-          link.classList.add("active-link");
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

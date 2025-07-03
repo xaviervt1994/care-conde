@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CareConde | Honest Help for Your Home</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
@@ -24,7 +26,14 @@
         <img src="assets/images/IMG_5805.jpeg" alt="CareConde Logo" />
       </div>
       <nav>
-        <div class="hamburger" id="hamburger">&#9776;</div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          &#9776;
+        </button>
         <ul class="nav-links" id="navLinks">
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -33,102 +42,82 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h2>Your Honest Help for Home & Property</h2>
-        <p>
-          Locally owned. Fully dedicated. Proudly serving Norman & surrounding
-          areas.
-        </p>
-        <a class="cta-button" href="tel:4053679513"
-          >Call or Text (405) 367-9513</a
-        >
-      </div>
-    </section>
-
-    <section class="services-preview">
-      <div class="service-card">
-        <h3>Junk Removal</h3>
-        <p>Fast, affordable, and clean removals of unwanted items.</p>
-      </div>
-      <div class="service-card">
-        <h3>Moving</h3>
-        <p>Reliable help for local or small moves.</p>
-      </div>
-      <div class="service-card">
-        <h3>Handyman</h3>
-        <p>Repairs, installations, and small home projects.</p>
-      </div>
-    </section>
-
-    <section style="background-color: #f1f8f5; padding: 3rem 1.5rem">
-      <h2 style="text-align: center; margin-bottom: 2rem">
-        What Our Clients Say
-      </h2>
-      <div
-        style="
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 2rem;
-        "
-      >
-        <div class="testimonial-card">
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Your Honest Help for Home & Property</h1>
           <p>
-            "Super fast and friendly. They hauled everything in under an hour!"
+            Locally owned. Fully dedicated. Proudly serving Norman & surrounding
+            areas.
           </p>
-          <strong>– Jamie R.</strong>
+          <a class="cta-button" href="tel:4053679513"
+            >Call or Text (405) 367-9513</a
+          >
         </div>
-        <div class="testimonial-card">
-          <p>
-            "I’ve used them twice now for moving. Best guys around.
-            Trustworthy."
-          </p>
-          <strong>– Malik T.</strong>
-        </div>
-        <div class="testimonial-card">
-          <p>"Finally a handyman service that’s on time and affordable!"</p>
-          <strong>– Erica W.</strong>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section style="padding: 3rem 1.5rem">
-      <h2 style="text-align: center; margin-bottom: 2rem">Our Work</h2>
-      <div class="gallery-grid">
-        <img
-          src="assets/images/photo-1584786454449-ecc77738684c.avif"
-          alt="Junk removal before/after"
-        />
-        <img
-          src="assets/images/premium_photo-1661409078904-42334551db0c.avif"
-          alt="Moving job"
-        />
-        <img
-          src="assets/images/premium_photo-1682597001042-c130c0627a7e.avif"
-          alt="Handyman fix"
-        />
-      </div>
-    </section>
+      <section class="services-preview">
+        <div class="service-card">
+          <h3>Junk Removal</h3>
+          <p>Fast, affordable, and clean removals of unwanted items.</p>
+        </div>
+        <div class="service-card">
+          <h3>Moving</h3>
+          <p>Reliable help for local or small moves.</p>
+        </div>
+        <div class="service-card">
+          <h3>Handyman</h3>
+          <p>Repairs, installations, and small home projects.</p>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-container">
+          <div class="testimonial-card">
+            <p>
+              "Super fast and friendly. They hauled everything in under an
+              hour!"
+            </p>
+            <strong>– Jamie R.</strong>
+          </div>
+          <div class="testimonial-card">
+            <p>
+              "I’ve used them twice now for moving. Best guys around.
+              Trustworthy."
+            </p>
+            <strong>– Malik T.</strong>
+          </div>
+          <div class="testimonial-card">
+            <p>"Finally a handyman service that’s on time and affordable!"</p>
+            <strong>– Erica W.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2>Our Work</h2>
+        <div class="gallery-grid">
+          <img
+            src="assets/images/photo-1584786454449-ecc77738684c.avif"
+            alt="Junk removal before and after"
+          />
+          <img
+            src="assets/images/premium_photo-1661409078904-42334551db0c.avif"
+            alt="Team moving furniture"
+          />
+          <img
+            src="assets/images/premium_photo-1682597001042-c130c0627a7e.avif"
+            alt="Completed handyman fixture installation"
+          />
+        </div>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2025 CareConde. All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>
-    <script>
-      // Hamburger toggle
-      document.getElementById("hamburger").addEventListener("click", () => {
-        document.getElementById("navLinks").classList.toggle("active");
-      });
-
-      // Highlight current page in nav
-      const navLinks = document.querySelectorAll(".nav-links a");
-      navLinks.forEach((link) => {
-        if (link.href === window.location.href) {
-          link.classList.add("active-link");
-        }
-      });
-    </script>
   </body>
 </html>

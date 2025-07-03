@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | CareConde</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="CareConde Logo" />
+        <h1>CareConde</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Let’s Get in Touch</h2>
+        <p>Call or text us anytime — or send a message below.</p>
+        <a class="cta-button" href="tel:4053679513">📞 (405) 367-9513</a>
+      </div>
+    </section>
+
+    <section style="padding: 2rem 1.5rem; max-width: 600px; margin: auto">
+      <form id="contactForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="cta-button" style="margin-top: 1rem">
+          Send Message
+        </button>
+      </form>
+    </section>
+
+    <section style="padding: 2rem 1.5rem; text-align: center">
+      <h3>Our Service Area</h3>
+      <div
+        style="
+          width: 100%;
+          height: 300px;
+          background-color: #ddd;
+          border-radius: 8px;
+        "
+      >
+        <!-- Replace with embedded Google Map iframe if desired -->
+        <p style="padding: 2rem; color: #444">[Google Map goes here]</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 CareConde. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Basic validation alert
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thanks for your message! We’ll be in touch soon.");
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

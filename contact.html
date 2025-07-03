@@ -9,24 +9,24 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <meta
+      name="description"
+      content="CareConde is your honest help for junk removal, moving, and handyman services in Norman, OK and surrounding areas. Locally owned, fully dedicated."
+    />
+    <meta
+      name="keywords"
+      content="junk removal Norman OK, moving help Oklahoma, handyman Norman, CareConde, furniture assembly, remodeling, local services"
+    />
   </head>
-  <meta
-    name="description"
-    content="CareConde is your honest help for junk removal, moving, and handyman services in Norman, OK and surrounding areas. Locally owned, fully dedicated."
-  />
-  <meta
-    name="keywords"
-    content="junk removal Norman OK, moving help Oklahoma, handyman Norman, CareConde, furniture assembly, remodeling, local services"
-  />
 
   <body>
     <header class="navbar">
       <div class="logo">
         <img src="assets/images/logo.png" alt="CareConde Logo" />
-        <h1>CareConde</h1>
       </div>
       <nav>
-        <ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -78,15 +78,6 @@
       <p>&copy; 2025 CareConde. All rights reserved.</p>
     </footer>
 
-    <script>
-      // Basic validation alert
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert("Thanks for your message! We’ll be in touch soon.");
-          this.reset();
-        });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

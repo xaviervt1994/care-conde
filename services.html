@@ -22,10 +22,10 @@
     <header class="navbar">
       <div class="logo">
         <img src="assets/images/logo.png" alt="CareConde Logo" />
-        <h1>CareConde</h1>
       </div>
       <nav>
-        <ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -45,13 +45,15 @@
       style="padding: 2rem 1.5rem; max-width: 1000px; margin: auto"
     >
       <div class="service-detail">
-        <h3>🔧 Handyman Help</h3>
-        <p>Small fixes, big impact. Reliable handyman help when you need it.</p>
+        <h3>🗑️ Junk Removal</h3>
+        <p>
+          We haul away old furniture, appliances, yard debris, and general
+          clutter — responsibly and quickly.
+        </p>
         <ul style="margin-left: 1.5rem; list-style: disc">
-          <li>TV mounting, shelves, curtain rods</li>
-          <li>Furniture assembly</li>
-          <li>Transporting large or heavy items</li>
-          <li>Minor repairs, caulking, light remodeling & more</li>
+          <li>Single item pickup or full property cleanouts</li>
+          <li>Garage, shed, attic, or rental cleanouts</li>
+          <li>Donation drop-offs and recycling when possible</li>
         </ul>
       </div>
 
@@ -78,7 +80,8 @@
         <ul style="margin-left: 1.5rem; list-style: disc">
           <li>TV mounting, shelves, curtain rods</li>
           <li>Furniture assembly</li>
-          <li>Minor repairs, caulking, touch-ups</li>
+          <li>Transporting large or heavy items</li>
+          <li>Minor repairs, caulking, light remodeling & more</li>
         </ul>
       </div>
     </section>
@@ -86,5 +89,20 @@
     <footer>
       <p>&copy; 2025 CareConde. All rights reserved.</p>
     </footer>
+
+    <script>
+      // Hamburger toggle
+      document.getElementById("hamburger").addEventListener("click", () => {
+        document.getElementById("navLinks").classList.toggle("active");
+      });
+
+      // Highlight current page
+      const navLinks = document.querySelectorAll(".nav-links a");
+      navLinks.forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("active-link");
+        }
+      });
+    </script>
   </body>
 </html>

@@ -22,10 +22,10 @@
     <header class="navbar">
       <div class="logo">
         <img src="assets/images/IMG_5805.jpeg" alt="CareConde Logo" />
-        <h1>CareConde</h1>
       </div>
       <nav>
-        <ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="nav-links" id="navLinks">
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -33,7 +33,6 @@
       </nav>
     </header>
 
-    <!-- HERO SECTION (replace the old one) -->
     <section class="hero">
       <div class="hero-text">
         <h2>Your Honest Help for Home & Property</h2>
@@ -62,7 +61,6 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section style="background-color: #f1f8f5; padding: 3rem 1.5rem">
       <h2 style="text-align: center; margin-bottom: 2rem">
         What Our Clients Say
@@ -95,7 +93,6 @@
       </div>
     </section>
 
-    <!-- Gallery Section -->
     <section style="padding: 3rem 1.5rem">
       <h2 style="text-align: center; margin-bottom: 2rem">Our Work</h2>
       <div class="gallery-grid">
@@ -111,5 +108,19 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+      // Hamburger toggle
+      document.getElementById("hamburger").addEventListener("click", () => {
+        document.getElementById("navLinks").classList.toggle("active");
+      });
+
+      // Highlight current page in nav
+      const navLinks = document.querySelectorAll(".nav-links a");
+      navLinks.forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("active-link");
+        }
+      });
+    </script>
   </body>
 </html>

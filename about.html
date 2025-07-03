@@ -22,10 +22,10 @@
     <header class="navbar">
       <div class="logo">
         <img src="assets/images/logo.png" alt="CareConde Logo" />
-        <h1>CareConde</h1>
       </div>
       <nav>
-        <ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -74,5 +74,20 @@
     <footer>
       <p>&copy; 2025 CareConde. All rights reserved.</p>
     </footer>
+
+    <script>
+      // Hamburger toggle
+      document.getElementById("hamburger").addEventListener("click", () => {
+        document.getElementById("navLinks").classList.toggle("active");
+      });
+
+      // Highlight current page
+      const navLinks = document.querySelectorAll(".nav-links a");
+      navLinks.forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("active-link");
+        }
+      });
+    </script>
   </body>
 </html>
